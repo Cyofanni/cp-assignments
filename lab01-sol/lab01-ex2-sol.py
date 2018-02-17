@@ -130,7 +130,7 @@ while slv.NextSolution():
     print 'The Ukranian is in house %d' % ukr.Value()
     print 'The Norwegian is in house %d' % nor.Value()
     print 'The Japanese is in house %d' % jap.Value()
-    print 'Water is drinked in house %d' % water.Value()
+    print 'Water is drunk in house %d' % water.Value()
     print 'The zebra is in house %d' % zebra.Value()
 
     # WE WANT A SINGLE SOLUTION
