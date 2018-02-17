@@ -1,0 +1,383 @@
+{
+    "cover": [
+        {
+            "day": 0,
+            "req": 5,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        },
+        {
+            "day": 1,
+            "req": 7,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        },
+        {
+            "day": 2,
+            "req": 6,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        },
+        {
+            "day": 3,
+            "req": 4,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        },
+        {
+            "day": 4,
+            "req": 5,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        },
+        {
+            "day": 5,
+            "req": 5,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        },
+        {
+            "day": 6,
+            "req": 5,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        },
+        {
+            "day": 7,
+            "req": 6,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        },
+        {
+            "day": 8,
+            "req": 7,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        },
+        {
+            "day": 9,
+            "req": 4,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        },
+        {
+            "day": 10,
+            "req": 2,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        },
+        {
+            "day": 11,
+            "req": 5,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        },
+        {
+            "day": 12,
+            "req": 6,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        },
+        {
+            "day": 13,
+            "req": 4,
+            "shift": "D",
+            "wgto": 1,
+            "wgtu": 100
+        }
+    ],
+    "employees": {
+        "A": {
+            "daysoff": [
+                0
+            ],
+            "maxcons": 5,
+            "maxdur": 4320,
+            "maxshifts": {
+                "D": 14
+            },
+            "maxweekend": 1,
+            "mincons": 2,
+            "minconsoff": 2,
+            "mindur": 3360
+        },
+        "B": {
+            "daysoff": [
+                5
+            ],
+            "maxcons": 5,
+            "maxdur": 4320,
+            "maxshifts": {
+                "D": 14
+            },
+            "maxweekend": 1,
+            "mincons": 2,
+            "minconsoff": 2,
+            "mindur": 3360
+        },
+        "C": {
+            "daysoff": [
+                8
+            ],
+            "maxcons": 5,
+            "maxdur": 4320,
+            "maxshifts": {
+                "D": 14
+            },
+            "maxweekend": 1,
+            "mincons": 2,
+            "minconsoff": 2,
+            "mindur": 3360
+        },
+        "D": {
+            "daysoff": [
+                2
+            ],
+            "maxcons": 5,
+            "maxdur": 4320,
+            "maxshifts": {
+                "D": 14
+            },
+            "maxweekend": 1,
+            "mincons": 2,
+            "minconsoff": 2,
+            "mindur": 3360
+        },
+        "E": {
+            "daysoff": [
+                9
+            ],
+            "maxcons": 5,
+            "maxdur": 4320,
+            "maxshifts": {
+                "D": 14
+            },
+            "maxweekend": 1,
+            "mincons": 2,
+            "minconsoff": 2,
+            "mindur": 3360
+        },
+        "F": {
+            "daysoff": [
+                5
+            ],
+            "maxcons": 5,
+            "maxdur": 4320,
+            "maxshifts": {
+                "D": 14
+            },
+            "maxweekend": 1,
+            "mincons": 2,
+            "minconsoff": 2,
+            "mindur": 3360
+        },
+        "G": {
+            "daysoff": [
+                1
+            ],
+            "maxcons": 5,
+            "maxdur": 4320,
+            "maxshifts": {
+                "D": 14
+            },
+            "maxweekend": 1,
+            "mincons": 2,
+            "minconsoff": 2,
+            "mindur": 3360
+        },
+        "H": {
+            "daysoff": [
+                7
+            ],
+            "maxcons": 5,
+            "maxdur": 4320,
+            "maxshifts": {
+                "D": 14
+            },
+            "maxweekend": 1,
+            "mincons": 2,
+            "minconsoff": 2,
+            "mindur": 3360
+        }
+    },
+    "eoh": 14,
+    "offreq": [
+        {
+            "day": 12,
+            "emp": "C",
+            "shift": "D",
+            "wgt": 1
+        },
+        {
+            "day": 13,
+            "emp": "C",
+            "shift": "D",
+            "wgt": 1
+        },
+        {
+            "day": 8,
+            "emp": "F",
+            "shift": "D",
+            "wgt": 3
+        },
+        {
+            "day": 2,
+            "emp": "H",
+            "shift": "D",
+            "wgt": 3
+        },
+        {
+            "day": 3,
+            "emp": "H",
+            "shift": "D",
+            "wgt": 3
+        }
+    ],
+    "onreq": [
+        {
+            "day": 2,
+            "emp": "A",
+            "shift": "D",
+            "wgt": 2
+        },
+        {
+            "day": 3,
+            "emp": "A",
+            "shift": "D",
+            "wgt": 2
+        },
+        {
+            "day": 0,
+            "emp": "B",
+            "shift": "D",
+            "wgt": 3
+        },
+        {
+            "day": 1,
+            "emp": "B",
+            "shift": "D",
+            "wgt": 3
+        },
+        {
+            "day": 2,
+            "emp": "B",
+            "shift": "D",
+            "wgt": 3
+        },
+        {
+            "day": 3,
+            "emp": "B",
+            "shift": "D",
+            "wgt": 3
+        },
+        {
+            "day": 4,
+            "emp": "B",
+            "shift": "D",
+            "wgt": 3
+        },
+        {
+            "day": 0,
+            "emp": "C",
+            "shift": "D",
+            "wgt": 1
+        },
+        {
+            "day": 1,
+            "emp": "C",
+            "shift": "D",
+            "wgt": 1
+        },
+        {
+            "day": 2,
+            "emp": "C",
+            "shift": "D",
+            "wgt": 1
+        },
+        {
+            "day": 3,
+            "emp": "C",
+            "shift": "D",
+            "wgt": 1
+        },
+        {
+            "day": 4,
+            "emp": "C",
+            "shift": "D",
+            "wgt": 1
+        },
+        {
+            "day": 8,
+            "emp": "D",
+            "shift": "D",
+            "wgt": 2
+        },
+        {
+            "day": 9,
+            "emp": "D",
+            "shift": "D",
+            "wgt": 2
+        },
+        {
+            "day": 0,
+            "emp": "F",
+            "shift": "D",
+            "wgt": 2
+        },
+        {
+            "day": 1,
+            "emp": "F",
+            "shift": "D",
+            "wgt": 2
+        },
+        {
+            "day": 9,
+            "emp": "H",
+            "shift": "D",
+            "wgt": 1
+        },
+        {
+            "day": 10,
+            "emp": "H",
+            "shift": "D",
+            "wgt": 1
+        },
+        {
+            "day": 11,
+            "emp": "H",
+            "shift": "D",
+            "wgt": 1
+        },
+        {
+            "day": 12,
+            "emp": "H",
+            "shift": "D",
+            "wgt": 1
+        },
+        {
+            "day": 13,
+            "emp": "H",
+            "shift": "D",
+            "wgt": 1
+        }
+    ],
+    "shifts": {
+        "D": {
+            "dur": 480,
+            "inc": []
+        }
+    }
+}

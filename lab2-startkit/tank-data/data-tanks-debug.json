@@ -1,0 +1,14 @@
+{
+  "chemicals": [
+    { "dangerous": false, "amount": 78,  "tmin": 0,  "tmax": 90 }, 
+    { "dangerous": true, "amount": 50,  "tmin": -10,  "tmax": 10 }, 
+    { "dangerous": false, "amount": 45,  "tmin": 40,  "tmax": 70 }, 
+    { "dangerous": true, "amount": 60,  "tmin": 0,  "tmax": 100 }
+  ], 
+  "tanks": [
+    { "safe": false, "cap": 100 }, 
+    { "safe": false, "cap": 80 }, 
+    { "safe": true, "cap": 60 }, 
+    { "safe": true, "cap": 75 }
+  ]
+}

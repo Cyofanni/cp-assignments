@@ -1,0 +1,9 @@
+{
+	"services": [
+		{"vm_num": 2, "vm_cpu": 4},
+		{"vm_num": 1, "vm_cpu": 4},
+		{"vm_num": 3, "vm_cpu": 2}
+	],
+	"cap_cpu": 8,
+	"nservers": 10
+}

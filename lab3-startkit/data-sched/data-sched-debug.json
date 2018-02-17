@@ -1,0 +1,26 @@
+{
+	"setups": [[0, 1], [2, 1]],
+	"order_list": [
+		{"prod": 0, "num": 2, "dline": 3},
+		{"prod": 1, "num": 2, "dline": 3},
+		{"prod": 2, "num": 3, "dline": 7},
+		{"prod": 1, "num": 3, "dline": 11}
+	],
+	"unit_list": [
+		{"prod": 0, "dline": 3},
+		{"prod": 0, "dline": 3},
+		{"prod": 1, "dline": 3},
+		{"prod": 1, "dline": 3},
+		{"prod": 2, "dline": 7},
+		{"prod": 2, "dline": 7},
+		{"prod": 2, "dline": 7},
+		{"prod": 1, "dline": 11},
+		{"prod": 1, "dline": 11},
+		{"prod": 1, "dline": 11}
+	],
+	"order_table": [
+		[0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0],
+		[0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 3],
+		[0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0]
+	]
+}

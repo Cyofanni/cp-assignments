@@ -1,0 +1,11 @@
+{
+ "lectures": [
+  { "num": 25, "long": false }, 
+  { "num": 22, "long": false }, 
+  { "num": 15, "long": true }
+ ], 
+ "rooms": [
+  { "cap": 66 }, 
+  { "cap": 58 }
+ ]
+}

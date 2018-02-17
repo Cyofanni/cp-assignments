@@ -1,0 +1,219 @@
+# IMPORT THE OR-TOOLS CONSTRAINT SOLVER
+from ortools.constraint_solver import pywrapcp
+import sys
+import json
+import math
+
+# ============================================================================== 
+# Custom decision builder
+# ============================================================================== 
+
+class ProbingExample(pywrapcp.PyDecisionBuilder):
+    '''
+    A dedicated DecisionBuilder for our problem, based on probing
+    '''
+
+    def __init__(self, succ):
+        pywrapcp.PyDecisionBuilder.__init__(self)
+        self.succ = succ
+
+    def Next(self, slv):
+        # Find the indices of the succ variables that are not yet bound
+        candidates = [i for i in range(len(self.succ)) if not self.succ[i].Bound()]
+
+        # If all variables are bound, stop this phase of search
+        if len(candidates) == 0:
+            return None
+
+        # Otherwise, pick the first candidate...
+        idx = candidates[0]
+        # ...And the minium value in the domain (example of usgin "Min()")
+        val = self.succ[idx].Min()
+
+        # Assign the value to the variable (and fail otherwise)
+        return slv.AssignVariableValueOrFail(self.succ[idx], val)
+
+
+class BranchingExample(pywrapcp.PyDecisionBuilder):
+    '''
+    A dedicated DecisionBuilder for our problem, based on probing
+    '''
+
+    def __init__(self, succ):
+        pywrapcp.PyDecisionBuilder.__init__(self)
+        self.succ = succ
+
+    def Next(self, slv):
+        # Find the indices of the succ variables that are not yet bound
+        candidates = [i for i in range(len(self.succ)) if not self.succ[i].Bound()]
+
+        # If all variables are bound, stop this phase of search
+        if len(candidates) == 0:
+            return None
+
+        # Otherwise, pick the first candidate...
+        idx = candidates[0]
+        # ...And the minimum value in the domain (example of using "Contains()")
+        candidate_vals = [j for j in range(len(self.succ)) if self.succ[idx].Contains(j)]
+        val = candidate_vals[0]
+
+        # Assign the value to the variable (and post var != v otherwise)
+        return slv.AssignVariableValue(self.succ[idx], val)
+
+
+# LOAD PROBLEM DATA
+if len(sys.argv) != 2:
+    print 'Usage: python %s <data file>' % sys.argv[0]
+    sys.exit()
+else:
+    fname = sys.argv[1]
+
+with open(fname) as fin:
+    data = json.load(fin)
+
+# Cache some useful data
+np = data['n_periods']
+ni = data['n_items']
+dlines = data['dlines']
+stcost = data['stcost']
+tcosts = data['tcosts']
+bounds = data['bounds']
+
+# unit descriptors
+units = []
+for k, l in enumerate(dlines):
+    for d in l:
+        units.append((k, d))
+
+# Sort units by increasing type
+units = sorted(units, key=lambda u: u[0])
+
+# Obtain a list with the deadlines and one with the types
+flat_dlines = [d for k, d in units]
+flat_types = [k for k, d in units]
+
+# Obtain the number of units
+nu = len(flat_dlines)
+
+# Build solver instance
+slv = pywrapcp.Solver('lot-sizing')
+
+# One position variable for each unit (+1 for a fake last unit)
+# NOTE: the domains are also correspondingly enlarged
+date = [slv.IntVar(0, np, 'date[%d]' % i) for i in range(nu+1)]
+
+# One successor variable for each unit (+1 for a fake last unit)
+# NOTE: the domains are also correspondingly enlarged
+succ = [slv.IntVar(0, nu, 'succ[%d]' % i) for i in range(nu+1)]
+
+# Cost variable
+z = slv.IntVar(0, sys.maxint, 'z')
+
+# The successors must form a cycle
+slv.Add(slv.Circuit(succ))
+
+# Connect the successor and position variables
+for i in range(nu):
+    slv.Add(date[i] < slv.Element(date, succ[i]))
+# The fake item must come after all the rest
+slv.Add(date[nu] == np)
+
+# Enforce the capacity constraints
+slv.Add(slv.AllDifferent(date))
+
+# Enforce the deadline constraints
+for i in range(nu):
+    slv.Add(date[i] <= flat_dlines[i])
+
+# Some symmetry breaking constraints
+for i in range(nu):
+    slv.Add(succ[i] != i)
+    for j in range(nu):
+        if i != j and flat_types[i] == flat_types[j] and flat_dlines[i] < flat_dlines[j]:
+            # We can force the scheduling order of the two units
+            slv.Add(date[i] < date[j])
+            slv.Add(succ[j] != i)
+
+# Compute the transition costs (an expression)
+# step 1: build an extended transition cost matrix (unit-to-unit, rather than
+#         type-to-type).
+ext_tcosts = [[tcosts[flat_types[i]][flat_types[j]] for j in range(nu)] for i in range(nu)]
+# step 2: we add one extra column for transition costs to the fake unit
+for i in range(nu):
+    ext_tcosts[i].append(0)
+# step 3: add one extra for the fake unit
+ext_tcosts.append([0 for i in range(nu+1)])
+# step 4: finally, we can build an expression for the transition costs
+tot_tcosts = slv.Sum([succ[i].IndexOf(ext_tcosts[i]) for i in range(nu)])
+
+# Compute the stocking costs (an expression)
+tot_stcost = stcost * slv.Sum([flat_dlines[i]-date[i] for i in range(nu)])
+
+# Define the total cost
+slv.Add(z == tot_tcosts + tot_stcost)
+# slv.Add(z == tot_stcost)
+
+# DEFINE THE SEARCH STRATEGY
+db1 = slv.Phase(date,
+                slv.INT_VAR_DEFAULT,
+                slv.INT_VALUE_DEFAULT)
+db1b = slv.Phase(succ,
+                 slv.INT_VAR_DEFAULT,
+                 slv.INT_VALUE_DEFAULT)
+db3 = ProbingExample(succ)
+db4 = BranchingExample(succ)
+
+decision_builder = slv.Compose([db1, db4])
+
+# INIT THE SEARCH PROCESS
+time_limit = 30000
+branches_limit = 2000000
+search_monitors = [slv.Minimize(z, 1),
+                   slv.BranchesLimit(branches_limit)]
+# init search
+slv.NewSearch(decision_builder, search_monitors)
+
+# SEARCH FOR A FEASIBLE SOLUTION
+zbest = None
+zbest_branches = None
+while slv.NextSolution():
+    #
+    # PRINT SOLUTION
+    #
+    print '--- Solution found, time: %.3f (sec), branches: %d' % \
+                (slv.WallTime()/1000.0, slv.Branches())
+    print '--- z: %d' % z.Value()
+
+    # Obtain the date in a more easy to plot format
+    unit_sched = [-1 for j in range(np)]
+    type_sched = [-1 for j in range(np)]
+    for i in range(nu):
+        unit_sched[date[i].Value()] = i
+        type_sched[date[i].Value()] = flat_types[i] 
+    print '--- units: %s' % ' '.join(' X ' if v < 0 else '%3d' % v for v in unit_sched)
+    print '--- types: %s' % ' '.join(' X ' if v < 0 else '%3d' % v for v in type_sched)
+    print
+
+    # STORE SOLUTION VALUE
+    zbest = z.Value()
+    zbest_branches = slv.Branches()
+
+# END THE SEARCH PROCESS
+slv.EndSearch()
+
+# obtain stats
+branches, time = slv.Branches(), slv.WallTime()
+# time capping
+time = max(1, time)
+
+# print stats
+print '--- FINAL STATS'
+if zbest == None:
+    print '--- No solution found'
+else:
+    print '--- Best solution found: %d, at #branches: %d' % (zbest, zbest_branches)
+    print '--- Best known solution (from the literature): %d' % bounds[-1]
+print '--- Number of branches: %d' % branches
+print '--- Computation time: %.3f (sec)' % (time / 1000.0)
+if slv.WallTime() > time_limit:
+    print '--- Time limit exceeded'

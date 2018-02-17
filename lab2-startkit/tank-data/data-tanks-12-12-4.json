@@ -1,0 +1,126 @@
+{
+ "chemicals": [
+  {
+   "dangerous": true, 
+   "amount": 64, 
+   "tmin": -8, 
+   "tmax": 13
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 59, 
+   "tmin": -12, 
+   "tmax": 68
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 63, 
+   "tmin": -19, 
+   "tmax": 77
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 34, 
+   "tmin": -7, 
+   "tmax": 15
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 66, 
+   "tmin": -14, 
+   "tmax": 75
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 48, 
+   "tmin": -10, 
+   "tmax": 78
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 45, 
+   "tmin": -6, 
+   "tmax": 77
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 49, 
+   "tmin": -13, 
+   "tmax": 72
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 57, 
+   "tmin": -4, 
+   "tmax": 89
+  }, 
+  {
+   "dangerous": true, 
+   "amount": 53, 
+   "tmin": -1, 
+   "tmax": 84
+  }, 
+  {
+   "dangerous": true, 
+   "amount": 34, 
+   "tmin": -19, 
+   "tmax": 74
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 60, 
+   "tmin": 4, 
+   "tmax": 99
+  }
+ ], 
+ "tanks": [
+  {
+   "cap": 85, 
+   "safe": true
+  }, 
+  {
+   "cap": 68, 
+   "safe": false
+  }, 
+  {
+   "cap": 42, 
+   "safe": true
+  }, 
+  {
+   "cap": 31, 
+   "safe": false
+  }, 
+  {
+   "cap": 76, 
+   "safe": false
+  }, 
+  {
+   "cap": 51, 
+   "safe": true
+  }, 
+  {
+   "cap": 72, 
+   "safe": false
+  }, 
+  {
+   "cap": 62, 
+   "safe": true
+  }, 
+  {
+   "cap": 70, 
+   "safe": true
+  }, 
+  {
+   "cap": 56, 
+   "safe": false
+  }, 
+  {
+   "cap": 76, 
+   "safe": false
+  }, 
+  {
+   "cap": 80, 
+   "safe": true
+  }
+ ]
+}

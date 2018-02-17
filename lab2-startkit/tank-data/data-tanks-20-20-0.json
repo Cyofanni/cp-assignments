@@ -1,0 +1,206 @@
+{
+ "chemicals": [
+  {
+   "dangerous": false, 
+   "amount": 54, 
+   "tmin": -3, 
+   "tmax": 78
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 63, 
+   "tmin": 1, 
+   "tmax": 91
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 30, 
+   "tmin": 2, 
+   "tmax": 99
+  }, 
+  {
+   "dangerous": true, 
+   "amount": 31, 
+   "tmin": -8, 
+   "tmax": 74
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 62, 
+   "tmin": -2, 
+   "tmax": 80
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 40, 
+   "tmin": 5, 
+   "tmax": 91
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 30, 
+   "tmin": -13, 
+   "tmax": 78
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 53, 
+   "tmin": 4, 
+   "tmax": 25
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 77, 
+   "tmin": -14, 
+   "tmax": 75
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 47, 
+   "tmin": -8, 
+   "tmax": 72
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 58, 
+   "tmin": -13, 
+   "tmax": 68
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 50, 
+   "tmin": 6, 
+   "tmax": 89
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 58, 
+   "tmin": -9, 
+   "tmax": 72
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 72, 
+   "tmin": -18, 
+   "tmax": 66
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 30, 
+   "tmin": 9, 
+   "tmax": 109
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 46, 
+   "tmin": -4, 
+   "tmax": 94
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 66, 
+   "tmin": -16, 
+   "tmax": 76
+  }, 
+  {
+   "dangerous": true, 
+   "amount": 71, 
+   "tmin": -4, 
+   "tmax": 81
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 33, 
+   "tmin": 10, 
+   "tmax": 110
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 37, 
+   "tmin": 4, 
+   "tmax": 103
+  }
+ ], 
+ "tanks": [
+  {
+   "cap": 36, 
+   "safe": false
+  }, 
+  {
+   "cap": 94, 
+   "safe": false
+  }, 
+  {
+   "cap": 32, 
+   "safe": false
+  }, 
+  {
+   "cap": 64, 
+   "safe": true
+  }, 
+  {
+   "cap": 80, 
+   "safe": false
+  }, 
+  {
+   "cap": 87, 
+   "safe": true
+  }, 
+  {
+   "cap": 59, 
+   "safe": false
+  }, 
+  {
+   "cap": 70, 
+   "safe": false
+  }, 
+  {
+   "cap": 85, 
+   "safe": true
+  }, 
+  {
+   "cap": 32, 
+   "safe": true
+  }, 
+  {
+   "cap": 93, 
+   "safe": false
+  }, 
+  {
+   "cap": 58, 
+   "safe": false
+  }, 
+  {
+   "cap": 66, 
+   "safe": true
+  }, 
+  {
+   "cap": 91, 
+   "safe": false
+  }, 
+  {
+   "cap": 92, 
+   "safe": true
+  }, 
+  {
+   "cap": 70, 
+   "safe": false
+  }, 
+  {
+   "cap": 77, 
+   "safe": false
+  }, 
+  {
+   "cap": 99, 
+   "safe": true
+  }, 
+  {
+   "cap": 32, 
+   "safe": true
+  }, 
+  {
+   "cap": 42, 
+   "safe": true
+  }
+ ]
+}

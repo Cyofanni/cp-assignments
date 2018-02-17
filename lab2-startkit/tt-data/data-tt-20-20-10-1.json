@@ -1,0 +1,186 @@
+{
+ "lectures": [
+  {
+   "num": 33, 
+   "long": false
+  }, 
+  {
+   "num": 16, 
+   "long": false
+  }, 
+  {
+   "num": 31, 
+   "long": false
+  }, 
+  {
+   "num": 14, 
+   "long": false
+  }, 
+  {
+   "num": 83, 
+   "long": false
+  }, 
+  {
+   "num": 50, 
+   "long": false
+  }, 
+  {
+   "num": 57, 
+   "long": false
+  }, 
+  {
+   "num": 52, 
+   "long": false
+  }, 
+  {
+   "num": 63, 
+   "long": false
+  }, 
+  {
+   "num": 75, 
+   "long": false
+  }, 
+  {
+   "num": 36, 
+   "long": false
+  }, 
+  {
+   "num": 15, 
+   "long": false
+  }, 
+  {
+   "num": 58, 
+   "long": false
+  }, 
+  {
+   "num": 85, 
+   "long": false
+  }, 
+  {
+   "num": 46, 
+   "long": false
+  }, 
+  {
+   "num": 72, 
+   "long": false
+  }, 
+  {
+   "num": 61, 
+   "long": false
+  }, 
+  {
+   "num": 65, 
+   "long": false
+  }, 
+  {
+   "num": 25, 
+   "long": false
+  }, 
+  {
+   "num": 71, 
+   "long": false
+  }, 
+  {
+   "num": 41, 
+   "long": true
+  }, 
+  {
+   "num": 22, 
+   "long": true
+  }, 
+  {
+   "num": 65, 
+   "long": true
+  }, 
+  {
+   "num": 50, 
+   "long": true
+  }, 
+  {
+   "num": 47, 
+   "long": true
+  }, 
+  {
+   "num": 61, 
+   "long": true
+  }, 
+  {
+   "num": 61, 
+   "long": true
+  }, 
+  {
+   "num": 79, 
+   "long": true
+  }, 
+  {
+   "num": 80, 
+   "long": true
+  }, 
+  {
+   "num": 58, 
+   "long": true
+  }
+ ], 
+ "rooms": [
+  {
+   "cap": 91
+  }, 
+  {
+   "cap": 74
+  }, 
+  {
+   "cap": 59
+  }, 
+  {
+   "cap": 100
+  }, 
+  {
+   "cap": 85
+  }, 
+  {
+   "cap": 50
+  }, 
+  {
+   "cap": 53
+  }, 
+  {
+   "cap": 99
+  }, 
+  {
+   "cap": 96
+  }, 
+  {
+   "cap": 48
+  }, 
+  {
+   "cap": 100
+  }, 
+  {
+   "cap": 70
+  }, 
+  {
+   "cap": 65
+  }, 
+  {
+   "cap": 78
+  }, 
+  {
+   "cap": 60
+  }, 
+  {
+   "cap": 86
+  }, 
+  {
+   "cap": 100
+  }, 
+  {
+   "cap": 49
+  }, 
+  {
+   "cap": 93
+  }, 
+  {
+   "cap": 68
+  }
+ ]
+}

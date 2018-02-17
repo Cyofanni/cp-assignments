@@ -1,0 +1,156 @@
+{
+ "chemicals": [
+  {
+   "dangerous": false, 
+   "amount": 47, 
+   "tmin": -19, 
+   "tmax": 70
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 66, 
+   "tmin": -13, 
+   "tmax": 69
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 52, 
+   "tmin": -11, 
+   "tmax": 79
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 40, 
+   "tmin": -19, 
+   "tmax": 63
+  }, 
+  {
+   "dangerous": true, 
+   "amount": 72, 
+   "tmin": -9, 
+   "tmax": 76
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 54, 
+   "tmin": -19, 
+   "tmax": 62
+  }, 
+  {
+   "dangerous": true, 
+   "amount": 43, 
+   "tmin": -11, 
+   "tmax": 10
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 76, 
+   "tmin": 1, 
+   "tmax": 23
+  }, 
+  {
+   "dangerous": true, 
+   "amount": 67, 
+   "tmin": -6, 
+   "tmax": 84
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 39, 
+   "tmin": -3, 
+   "tmax": 92
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 40, 
+   "tmin": -5, 
+   "tmax": 76
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 56, 
+   "tmin": 8, 
+   "tmax": 102
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 68, 
+   "tmin": -7, 
+   "tmax": 82
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 61, 
+   "tmin": 2, 
+   "tmax": 87
+  }, 
+  {
+   "dangerous": false, 
+   "amount": 30, 
+   "tmin": -17, 
+   "tmax": 64
+  }
+ ], 
+ "tanks": [
+  {
+   "cap": 66, 
+   "safe": false
+  }, 
+  {
+   "cap": 41, 
+   "safe": false
+  }, 
+  {
+   "cap": 92, 
+   "safe": true
+  }, 
+  {
+   "cap": 55, 
+   "safe": true
+  }, 
+  {
+   "cap": 65, 
+   "safe": false
+  }, 
+  {
+   "cap": 86, 
+   "safe": false
+  }, 
+  {
+   "cap": 89, 
+   "safe": true
+  }, 
+  {
+   "cap": 98, 
+   "safe": false
+  }, 
+  {
+   "cap": 61, 
+   "safe": true
+  }, 
+  {
+   "cap": 96, 
+   "safe": true
+  }, 
+  {
+   "cap": 73, 
+   "safe": true
+  }, 
+  {
+   "cap": 80, 
+   "safe": true
+  }, 
+  {
+   "cap": 32, 
+   "safe": false
+  }, 
+  {
+   "cap": 35, 
+   "safe": true
+  }, 
+  {
+   "cap": 31, 
+   "safe": false
+  }
+ ]
+}
